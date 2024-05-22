@@ -54,4 +54,14 @@ public class Carta {
     public void setPrecio(int precio) {
         this.precio = precio;
     }
+
+    public boolean esFaceCard() {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'esFaceCard'");
+    }
+
+    public boolean esJoker() {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'esJoker'");
+    }
 }

@@ -2,6 +2,8 @@ package fis.etsisi.upm.es.Juego;
 
 import java.util.Scanner;
 
+import fis.etsisi.upm.es.Cartas.GUIMazo;
+
 public class GUIJuego {
     private static GUIJuego instance;
     private Scanner scanner;
@@ -27,8 +29,10 @@ public class GUIJuego {
                 option = Integer.parseInt(scanner.nextLine());
                 switch(option){
                     case 1:
+                    showConfigurarMazo();
                         break;
                     case 2:
+                    showConfigurarJugadores();
                         break;
                     case 3:
                         break;
@@ -42,5 +46,18 @@ public class GUIJuego {
                 System.out.println("Error");
             }
         }
+    }
+
+    public void showConfigurarMazo() {
+        GUIMazo guiMazo = GUIMazo.getInstance();
+        guiMazo.showMenu();
+    }
+
+    public void showConfigurarJugadores() {
+        System.out.println("Configurar jugadores");
+    }
+
+    public void showPartida() {
+        System.out.println("Empezar partida");
     }
 }
