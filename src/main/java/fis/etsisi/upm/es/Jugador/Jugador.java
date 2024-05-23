@@ -1,6 +1,7 @@
 package fis.etsisi.upm.es.Jugador;
 
 import java.util.List;
+import java.util.Scanner;
 
 import fis.etsisi.upm.es.Cartas.Coleccion;
 import fis.etsisi.upm.es.Cartas.Mano;
@@ -25,6 +26,19 @@ public class Jugador {
     }
     public void jugar() {
 
+    }
+
+    public int apostar() {
+        int chapas;
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Introduce la cantidad de chapas a apostar:");
+        chapas = scanner.nextInt();
+        while (chapas > this.numChapas) {
+            System.out.println("No puedes apostar más chapas de las que tienes. Introduce una cantidad válida:");
+            chapas = scanner.nextInt();
+        }
+        this.numChapas -= chapas;
+        return chapas;
     }
 
     public void empezarPartida() {

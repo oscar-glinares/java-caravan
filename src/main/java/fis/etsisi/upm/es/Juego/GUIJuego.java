@@ -60,4 +60,31 @@ public class GUIJuego {
     public void showPartida() {
         System.out.println("Empezar partida");
     }
+
+    public void showApuestas() {
+        System.out.println("Ronda de apuestas");
+        int option = 1;
+        while(option != 0){
+            try{
+                
+                System.out.println("1. Apostar");
+                System.out.println("2. Retirarse");
+                System.out.println("0. Salir");
+                option = Integer.parseInt(scanner.nextLine());
+                switch(option){
+                    case 1:
+                        break;
+                    case 2:
+                        break;
+                    case 0:
+                        break;
+                    default:
+                        System.out.println("Opción no válida");
+                        break;
+                }
+            }catch(Exception e){
+                System.out.println("Error");
+            }
+        }
+    }
 }

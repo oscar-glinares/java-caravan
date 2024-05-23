@@ -13,4 +13,11 @@ public class Bot extends Jugador {
     public void jugar() {
 
     }
+
+    public int apostar(){
+        int chapas;
+        chapas = this.getNumChapas()/2;
+        this.setNumChapas(this.getNumChapas() - chapas);
+        return chapas;
+    }
 }
